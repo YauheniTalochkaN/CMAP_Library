@@ -22,36 +22,36 @@
 #include "MaterialProperties.hh"
 #include "Track.hh"
 
-#define const_c 299792458.0
-#define const_hr 1.054571817E-34 
-#define const_e 1.60217662E-19
-#define const_me 9.10938356E-31
-#define const_k 8.9875517873681764E9
-#define const_kB 1.380649E-23
-#define const_Ry 2.179872361103542E-18 
-#define unit_J 1.0
-#define unit_K 1.0
-#define unit_meV 1.60217662E-22
-#define unit_eV 1.60217662E-19
-#define unit_keV 1.60217662E-16
-#define unit_MeV 1.60217662E-13
-#define unit_m 1.0
-#define unit_cm 1.0E-2
-#define unit_mm 1.0E-3
-#define unit_mkm 1.0E-6
-#define unit_nm 1.0E-9
-#define unit_A 1.0E-10
-#define unit_s 1.0
-#define unit_mks 1.0E-6
-#define unit_ns 1.0E-9
-#define unit_ps 1.0E-12
-#define unit_fs 1.0E-15
-#define unit_V 1.0
-#define unit_kV 1.0E3
-#define unit_MV 1.0E6
-#define unit_T 1.0
-#define unit_mT 1.0E-3
-#define unit_mkT 1.0E-6
+constexpr Double_t const_c = 299792458.0;
+constexpr Double_t const_hr = 1.054571817E-34;
+constexpr Double_t const_e = 1.60217662E-19;
+constexpr Double_t const_me = 9.10938356E-31;
+constexpr Double_t const_k = 8.9875517873681764E9;
+constexpr Double_t const_kB = 1.380649E-23;
+constexpr Double_t const_Ry = 2.179872361103542E-18;
+constexpr Double_t unit_J = 1.0;
+constexpr Double_t unit_K = 1.0;
+constexpr Double_t unit_meV = 1.60217662E-22;
+constexpr Double_t unit_eV = 1.60217662E-19;
+constexpr Double_t unit_keV = 1.60217662E-16;
+constexpr Double_t unit_MeV = 1.60217662E-13;
+constexpr Double_t unit_m = 1.0;
+constexpr Double_t unit_cm = 1.0E-2;
+constexpr Double_t unit_mm = 1.0E-3;
+constexpr Double_t unit_mkm = 1.0E-6;
+constexpr Double_t unit_nm = 1.0E-9;
+constexpr Double_t unit_A = 1.0E-10;
+constexpr Double_t unit_s = 1.0;
+constexpr Double_t unit_mks = 1.0E-6;
+constexpr Double_t unit_ns = 1.0E-9;
+constexpr Double_t unit_ps = 1.0E-12;
+constexpr Double_t unit_fs = 1.0E-15;
+constexpr Double_t unit_V = 1.0;
+constexpr Double_t unit_kV = 1.0E3;
+constexpr Double_t unit_MV = 1.0E6;
+constexpr Double_t unit_T = 1.0;
+constexpr Double_t unit_mT = 1.0E-3;
+constexpr Double_t unit_mkT = 1.0E-6;
 
 struct PeriodicBoundaries
 {

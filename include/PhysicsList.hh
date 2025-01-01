@@ -21,6 +21,7 @@
 #include "LinearInterpolation.hh"
 #include "MaterialProperties.hh"
 #include "Track.hh"
+#include "Tensor.hh"
 
 constexpr Double_t const_c = 299792458.0;
 constexpr Double_t const_hr = 1.054571817E-34;

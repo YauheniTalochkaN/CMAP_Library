@@ -54,18 +54,6 @@ constexpr Double_t unit_T = 1.0;
 constexpr Double_t unit_mT = 1.0E-3;
 constexpr Double_t unit_mkT = 1.0E-6;
 
-struct PeriodicBoundaries
-{
-  TVector3 center = TVector3(0,0,0);
-  TVector3 edges = TVector3(1, 1, 1);
-
-  PeriodicBoundaries(TVector3 v1, TVector3 v2)
-  {
-     center = v1;
-     edges = v2;
-  }
-};
-
 class PhysicsList
 {
   public:
@@ -79,16 +67,12 @@ class PhysicsList
   TVector3 GetElectricFieldStrength();
   void SetMagneticFieldInduction(TVector3);
   TVector3 GetMagneticFieldInduction();
-  void SetPeriodicBoundaries(TVector3, TVector3);
-  PeriodicBoundaries* GetPeriodicBoundaries();
-  bool ApplyPeriodicity(TVector3&);
   void DrawTrack(Track*);
   TVector3 RandomTVector3();
   Double_t RandomValue(LinearInterpolation*, Double_t, Double_t);
   Double_t GetDistanceBetweenTwoTracks(TVector3, TVector3, TVector3, TVector3);
   Int_t DiscreteRandomValue(std::vector<Double_t>);
   TString GetTGeoVolumeAtPoint(TVector3);
-  void CutTrackLine(Track*);
   Double_t GenerateInelasticScatteringEnergy(Double_t, Double_t, TString);
   void GenerateVectorInElasticScattering(Double_t, Double_t, TVector3, TVector3&);
   bool GenerateVectorInInelasticScattering(Double_t, Double_t, Double_t, TVector3, TVector3&, TVector3&);
@@ -119,7 +103,6 @@ class PhysicsList
   private:
   Double_t TIME_CUT_eh, EH_GLOBAL_TIME;
   TVector3 Electric_Field_Strength, Magnetic_Field_Induction;
-  PeriodicBoundaries* PeriodicCube = nullptr;
 };
 
 #endif

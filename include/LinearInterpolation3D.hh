@@ -14,7 +14,7 @@
 struct sliceYZ
 {
     Double_t X = 0;
-    LinearInterpolation2D *surface;
+    LinearInterpolation2D* surface;
     
     sliceYZ(Double_t data_1, LinearInterpolation2D* data_2)
     {

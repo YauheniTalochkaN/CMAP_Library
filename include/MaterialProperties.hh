@@ -122,6 +122,7 @@ public:
     void SetEffectiveMass(Container*);
     void SetUnitCellVolume(Double_t);
     void SetDensityOfStates(LinearInterpolation*);
+    void SetElectronHoleBondProb(LinearInterpolation*);
     void SetGroupVelocity(Container*);
     void SetInelasticMeanFreePath(Container_imfp*);
     void SetElasticMeanFreePath(Container_emfp*);
@@ -137,6 +138,7 @@ public:
     const LinearInterpolation* GetEffectiveMass(const TString&);
     const LinearInterpolation* GetDensityOfStates();
     const LinearInterpolation* GetCDFOfStates();
+    const LinearInterpolation* GetElectronHoleBondProb();
     const LinearInterpolation* GetGroupVelocity(const TString&);
     std::vector<const Container_imfp*> GetListOfInelasticMeanFreePath(const TString&);
     std::vector<const Container_emfp*> GetListOfElasticAverageInteractionTime(const TString&);
@@ -155,6 +157,7 @@ private:
     std::vector<Container*> Effective_Mass;
     LinearInterpolation* Density_Of_States = nullptr;
     LinearInterpolation* CDF_Of_States = nullptr;
+    LinearInterpolation* Electron_Hole_Bond_Prob = nullptr;
     std::vector<Container*> Group_Velocity;
     std::vector<Container_imfp*> Inelastic_Mean_Free_Paths;
     std::vector<Container_emfp*> Elastic_Mean_Free_Path;
